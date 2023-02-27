@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      database: Test123
+      uri: mongodb://localhost:27017
+      key:
+        vault:
+          database: "encryption"
+          collection: "__keyVault"
+          name: "dataEncKey"
+      kmsprovider: "local"
+      encryption:
+        cryptdpath: "C:\\Users\\maniy\\Documents"
+        masterKeyPath: "C:/Users/maniy/Documents/master-key.txt"
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration
